@@ -322,19 +322,63 @@ Why use function?
 1) The findIndex() method returns the index (position) of the first element
 */
 
-var words = [
-  "spray",
-  "limit",
-  "elite",
-  "exuberant",
-  "destruction",
-  "present",
-];
+// var words = [
+//   "spray",
+//   "limit",
+//   "elite",
+//   "exuberant",
+//   "destruction",
+//   "present",
+// ];
 
-const result = words.findIndex((item) => item.length > 6);
+// const result = words.findIndex((item) => item.length > 6);
 
-console.log(result);
+// console.log(result);
 
+// ================= 15 JavaScript String concat =================
 
-// ================= 15 JavaScript Array Find =================
+/*
+The concat() method joins two or more strings.
+The concat() method does not change the existing strings.
+The concat() method returns a new string.
+*/
 
+// var text1 = "sea";
+// var text2 = "food";
+// var result = text1.concat(text2);
+// console.log(result);
+
+// ================= 16 JavaScript String indexOf =================
+
+/*
+The indexOf() method returns -1 if the value is not found.
+The indexOf() method is case sensitive.
+*/
+
+// var text = "Hello world, welcome to the universe.";
+// var result = text.indexOf("welcome");
+
+// console.log(result);
+
+// ================= 17 JavaScript String replace() =================
+
+/*
+The replace() method returns a new string with the value(s) replaced.
+The replace() method does not change the original string.
+*/
+
+// var string = "Javascript is fun";
+// var newString = string.replace("fun", "Awesome");
+// console.log(newString);
+
+// ================= 18 JavaScript Date Object =================
+
+// var today = new Date();
+// var DD = today.getDate();
+// var MM = today.getMonth();
+// var YYYY = today.getFullYear();
+// var hh = today.getHours();
+// var mm = today.getMinutes();
+// var ss = today.getSeconds();
+
+// console.log(ss);
