@@ -203,3 +203,138 @@ multiple lines
 //   console.log(i);
 //   i++;
 // } while (i <= 25);
+
+// ================= 8 JavaScript Function =================
+
+/*
+Why use function?
+
+1) Code Reusability
+2) Less Code
+3) Easy to understand
+4) Code organization
+
+*/
+
+//! Normal function
+// function myFun_1() {
+//   console.log("Hello JS Function! myFun_1");
+// }
+
+// myFun_1();
+
+//! Function Argument parsing
+// function myFun_2(text) {
+//   console.log(text);
+// }
+// myFun_2("Hello JS Function! myFun_2");
+
+//! Function return
+// function myFun_3() {
+//   var x = 10;
+//   var y = 20;
+//   var z = x + y;
+//   return z;
+// }
+// console.log(myFun_3());
+
+//! Function return
+// function myFun_4(x, y) {
+//   var x = x;
+//   var y = y;
+//   var z = x + y;
+//   return z;
+// }
+// console.log(myFun_4(10, 40));
+
+// ================= 9 JavaScript Object =================
+
+/*  
+1) Represents a collection of key-value pairs
+2) Objects in JavaScript can hold values of any data type, including numbers, strings, booleans, arrays, and even other objects.
+3) Have Properties, value and Methods
+
+*/
+
+// var person = {
+//   name: "John",
+//   age: 30,
+//   isEmployed: true,
+// };
+
+// console.log(person.name);
+// console.log(person["age"]);
+
+// ================= 10 JavaScript Array =================
+
+/*  
+1) JavaScript Array is a single variable that is used to store elements of different data types.
+2) stores a collection of values
+3) Arrays in JavaScript can hold values of any data type, including numbers, strings, objects, and even other arrays.
+
+
+*/
+
+// var name = ["Amit", "Raj", "Rohit", "Jamal", "Mitu"];
+
+// console.log(name[0]);
+
+// ================= 11 JavaScript Array Concat =================
+
+// var x = ["a", "b"];
+// var y = ["1", "2"];
+// var z = x.concat(y);
+
+// console.log(z);
+
+// ================= 12 JavaScript Array From =================
+
+/*  
+1) The from() method creates a new array
+*/
+
+// var x = Array.from("AB C");
+// console.log(x); // [ 'A', 'B', ' ', 'c' ]
+
+// ================= 13 JavaScript Array Filter =================
+
+/*  
+1) The filter() method creates a new array
+*/
+
+// var words = [
+//   "spray",
+//   "limit",
+//   "elite",
+//   "exuberant",
+//   "destruction",
+//   "present",
+// ];
+
+// const result = words.filter((word) => word.length > 6);
+// console.log(words[0].length);
+
+// console.log(result);
+
+// ================= 14 JavaScript Array findIndex =================
+
+/*  
+1) The findIndex() method returns the index (position) of the first element
+*/
+
+var words = [
+  "spray",
+  "limit",
+  "elite",
+  "exuberant",
+  "destruction",
+  "present",
+];
+
+const result = words.findIndex((item) => item.length > 6);
+
+console.log(result);
+
+
+// ================= 15 JavaScript Array Find =================
+
