@@ -217,6 +217,7 @@ Why use function?
 */
 
 //! Normal function
+
 // function myFun_1() {
 //   console.log("Hello JS Function! myFun_1");
 // }
@@ -224,9 +225,11 @@ Why use function?
 // myFun_1();
 
 //! Function Argument parsing
+
 // function myFun_2(text) {
 //   console.log(text);
 // }
+
 // myFun_2("Hello JS Function! myFun_2");
 
 //! Function return
@@ -238,14 +241,14 @@ Why use function?
 // }
 // console.log(myFun_3());
 
-//! Function return
+//! Function return + Argument parsing
 // function myFun_4(x, y) {
-//   var x = x;
-//   var y = y;
-//   var z = x + y;
+//   var xx = x; //10
+//   var yy = y; //40
+//   var z = xx + yy;
 //   return z;
 // }
-// console.log(myFun_4(10, 40));
+// console.log(myFun_4(10, 90));
 
 // ================= 9 JavaScript Object =================
 
@@ -262,7 +265,7 @@ Why use function?
 //   isEmployed: true,
 // };
 
-// console.log(person.name);
+// console.log(person.isEmployed);
 // console.log(person["age"]);
 
 // ================= 10 JavaScript Array =================
@@ -277,12 +280,12 @@ Why use function?
 
 // var name = ["Amit", "Raj", "Rohit", "Jamal", "Mitu"];
 
-// console.log(name[0]);
+// console.log(name);
 
 // ================= 11 JavaScript Array Concat =================
 
 // var x = ["a", "b"];
-// var y = ["1", "2"];
+// var y = ["1", "2", "3"];
 // var z = x.concat(y);
 
 // console.log(z);
@@ -293,7 +296,7 @@ Why use function?
 1) The from() method creates a new array
 */
 
-// var x = Array.from("AB C");
+// var x = Array.from("AB  C");
 // console.log(x); // [ 'A', 'B', ' ', 'c' ]
 
 // ================= 13 JavaScript Array Filter =================
@@ -311,7 +314,8 @@ Why use function?
 //   "present",
 // ];
 
-// const result = words.filter((word) => word.length > 6);
+// var result = words.filter((item) => item.length < 6);
+
 // console.log(words[0].length);
 
 // console.log(result);
@@ -369,6 +373,7 @@ The replace() method does not change the original string.
 
 // var string = "Javascript is fun";
 // var newString = string.replace("fun", "Awesome");
+// console.log(string);
 // console.log(newString);
 
 // ================= 18 JavaScript Date Object =================
@@ -382,3 +387,166 @@ The replace() method does not change the original string.
 // var ss = today.getSeconds();
 
 // console.log(ss);
+
+//! ================= ES6 =================
+
+/* 
+
+ES6 is a modern update of JavaScript
+ES6 or ECMAScript 6 is a scripting language.
+ECMAScript is generally used for client-side scripting
+used for writing server applications and services by using Node.js
+
+
+
+WHY SHOULD I LEARN ES6 ?
+    For React JS
+    For React Native
+    For Vue js
+    For Electron JS
+    Or Any Node.js dependent development
+
+
+
+    What we are learning about ES6:
+    ES6 Basic’s
+    ES6 Function’s
+    ES6 Array’s
+    ES6 Object
+    ES6 Class
+    ES6 String
+    ES6 Advance Feature’s
+
+*/
+
+// ================= 1 "use strict"  =================
+
+/* 
+Fixes the mistakes
+Strict mode makes it easier to write "secure" JavaScript.
+Find real errors.
+*/
+
+// "use strict";
+// x = 3.14;
+
+// ================= 2 Spread Operator  =================
+
+/* 
+The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
+
+
+Spread= প্রসার, বিস্তার
+Three dots (...).
+Array কে প্রশস্ত করে নতুন ভেলু যোগ করে
+
+*/
+
+// var numbersOne = [1, 2, 3];
+// var numbersTwo = [4, 5, 6];
+// var numbersCombined = [...numbersOne, ...numbersTwo];
+
+// console.log(numbersCombined);
+
+// var myVehicle = {
+//   brand: "Ford",
+//   model: "Mustang",
+//   color: "red",
+// };
+
+// var updateMyVehicle = {
+//   type: "car",
+//   year: 2021,
+//   color: "yellow",
+// };
+
+// var myUpdatedVehicle = { ...myVehicle, ...updateMyVehicle };
+
+// console.log(myUpdatedVehicle);
+
+// ================= 3 rest parameter  =================
+
+// function getFirstElementOfArray(...args) {
+//   console.log(args[0]);
+// }
+
+// var result = getFirstElementOfArray("shirshak", "Sabtech", "Javascript");
+
+// ================= 4 dynamic function  =================
+
+// var myFun = function () {
+//   console.log("This is function.");
+// };
+
+// ================= 4 ES6 Variables  =================
+
+/*
+
+    Using let:
+        let keyword is assigned the block scope
+        let cannot be re-declared.
+        can be reassigned a value.
+
+    Using const:
+        It cannot be reassigned a value.
+        It is block scoped.
+        A constant cannot be re-declared.
+
+
+*/
+
+// ================= 5 scope in javascript  =================
+
+/*
+In JavaScript, a variable has two types of scope:
+
+1. Global Scope
+    In the global scope, the variable can be accessed from any part of the JavaScript code.
+
+
+2. Local Scope
+    In the local scope, the variable can be accessed within a function where it is declared.
+
+*/
+
+// var x = 10;
+
+// var myFun = function () {
+//   var y = 20;
+//   console.log(x + y);
+// };
+
+// myFun();
+
+// var myFun_2 = function () {
+//   console.log(x+y);
+// };
+
+// myFun_2();
+
+// !  ES6 FUNCTION
+
+// ================= 6 anonymous function  =================
+
+// A function without a name
+
+// var myFun = function () {
+//   console.log("Hello");
+// };
+
+// myFun();
+
+// ================= 6 Arrow functions  =================
+
+/*
+    To write smaller function syntax.
+    Arrow functions make your code more readable and structured.
+    Arrow functions are anonymous functions
+    Can declare without the function keyword.
+*/
+
+// const myFun = () => {
+//   console.log("Hello");
+// };
+
+// myFun();
