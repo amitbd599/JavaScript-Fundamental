@@ -430,6 +430,8 @@ Find real errors.
 // "use strict";
 // x = 3.14;
 
+// console.log(x);
+
 // ================= 2 Spread Operator  =================
 
 /* 
@@ -442,8 +444,8 @@ Array কে প্রশস্ত করে নতুন ভেলু যোগ
 
 */
 
-// var numbersOne = [1, 2, 3];
-// var numbersTwo = [4, 5, 6];
+// var numbersOne = [1, 2, 3]; // 1,2,3
+// var numbersTwo = [4, 5, 6]; // 4,5,6
 // var numbersCombined = [...numbersOne, ...numbersTwo];
 
 // console.log(numbersCombined);
@@ -467,7 +469,7 @@ Array কে প্রশস্ত করে নতুন ভেলু যোগ
 // ================= 3 rest parameter  =================
 
 // function getFirstElementOfArray(...args) {
-//   console.log(args[0]);
+//   console.log(args[2]);
 // }
 
 // var result = getFirstElementOfArray("shirshak", "Sabtech", "Javascript");
@@ -477,6 +479,8 @@ Array কে প্রশস্ত করে নতুন ভেলু যোগ
 // var myFun = function () {
 //   console.log("This is function.");
 // };
+
+// myFun();
 
 // ================= 4 ES6 Variables  =================
 
@@ -507,12 +511,13 @@ In JavaScript, a variable has two types of scope:
 2. Local Scope
     In the local scope, the variable can be accessed within a function where it is declared.
 
+
 */
 
 // var x = 10;
-
+// var y = 20;
 // var myFun = function () {
-//   var y = 20;
+
 //   console.log(x + y);
 // };
 
@@ -545,8 +550,135 @@ In JavaScript, a variable has two types of scope:
     Can declare without the function keyword.
 */
 
-// const myFun = () => {
-//   console.log("Hello");
+// const myFun = (item) => {
+//   console.log(item);
 // };
 
-// myFun();
+// myFun("Hello JS");
+
+//! JavaScript OOP
+
+// ================= 1 JavaScript  Object =================
+// var billGates = {
+//   firstName: "Bill",
+//   lastName: "Gates",
+//   age: 65,
+//   salary: 10000,
+//   isEmployed: true,
+//   child: {
+//     firstName: "Jane",
+//     lastName: "Doe",
+//     age: 30,
+//     salary: 10000,
+//     isEmployed: true,
+//   },
+// };
+
+// console.log(billGates.firstName);
+// console.log(billGates["firstName"]);
+
+// ================= 2 JavaScript  ES6 Class =================
+
+// class myClass {
+//   x = 50;
+//   myFun() {
+//     console.log("Hello JS");
+//   }
+//   myFun_2() {
+//     console.log("Hello JS_2");
+//   }
+//   myFun_3(value) {
+//     console.log(value);
+//   }
+// }
+
+// var obj = new myClass(); // উক্ত ক্লাসের অবজেক্ট তৈরি করা
+
+// console.log(obj.x);
+
+// ================= 3 Constructor =================
+
+// class myClass {
+//   constructor() {
+//     console.log("Hello");
+//   }
+
+//   x = 50;
+//   myFun() {
+//     console.log("Hello JS");
+//   }
+//   myFun_2() {
+//     console.log("Hello JS_2");
+//   }
+//   myFun_3(value) {
+//     console.log(value);
+//   }
+// }
+
+// var obj = new myClass();
+// console.log(obj.x);
+
+// ================= 4 Constructor Parameter pass =================
+
+// class myClass {
+//   constructor(x, y) {
+//     this.x = x;
+//     this.y = y;
+//   }
+
+//   add() {
+//     let res = this.x + this.y;
+//     console.log(res);
+//   }
+// }
+
+// var obj = new myClass(10, 20);
+
+// obj.add();
+
+// ================= 5 Static Keyword =================
+
+// class myClass {
+//   static myFun() {
+//     console.log("Hello");
+//   }
+// }
+
+// myClass.myFun();
+
+// ================= 6 Class inheritance =================
+
+// class parent {
+//   myFunParent() {
+//     console.log("Hello parent.");
+//   }
+// }
+
+// class child extends parent {
+//   myFunChild() {
+//     console.log("Hello child.");
+//   }
+// }
+
+// var obj = new child();
+
+// obj.myFunChild();
+
+
+// ================= 7 Supper Keyword =================
+
+// class parent {
+//   myFunParent() {
+//     console.log("Hello parent.");
+//   }
+// }
+
+// class child extends parent {
+//   myFunChild() {
+//    super.myFunParent()
+//   }
+// }
+
+// var obj = new child();
+
+// obj.myFunChild();
