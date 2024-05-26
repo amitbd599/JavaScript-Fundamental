@@ -492,6 +492,11 @@ Why use function?
 // console.log(words[0].length);
 // console.log(result);
 
+//! 5)  Array join() method returns an array as a string
+// let words = ["Hello", "world"];
+// let sentence = words.join(" ");
+// console.log(sentence); // "Hello world"
+
 //! 5)  Array find() method returns the value of the first element in the array that satisfies the provided testing function. If no such element is found, it returns undefined.
 
 // exp : 1
@@ -704,26 +709,76 @@ Why use function?
 // fruits.unshift('grape');
 // console.log(fruits); // Output: ['grape', 'apple', 'banana', 'orange']
 
-// ================= 14 JavaScript Array findIndex =================
+//! ================= 15 JavaScript For In Loop =================
+// exp : 1
+// const numbers = [1, 2, 3, 4, 5];
+// for (let index in numbers) {
+//   console.log(numbers[index]);
+// }
 
-/*  
-1) The findIndex() method returns the index (position) of the first element
-*/
+// exp : 2
+// const fruits = ['apple', 'banana', 'orange'];
+// for (let index in fruits) {
+//   console.log(`Index: ${index}, Value: ${fruits[index]}`);
+// }
 
-// var words = [
-//   "spray",
-//   "limit",
-//   "elite",
-//   "exuberant",
-//   "destruction",
-//   "present",
-// ];
+// exp : 3
+// const person = {
+//     name: 'John',
+//     age: 30,
+//     gender: 'male'
+//   };
 
-// const result = words.findIndex((item) => item.length > 6);
+//   for (let key in person) {
+//     console.log(`${key}: ${person[key]}`);
+//   }
 
-// console.log(result);
+//! ================= 15 JavaScript ForEach Loop =================
 
-// ================= 15 JavaScript String concat =================
+// exp : 1
+// const numbers = [1, 2, 3, 4, 5];
+// numbers.forEach(function (number) {
+//   console.log(number);
+// });
+
+//! ================= 15 JavaScript map Loop =================
+// exp : 1
+// const numbers = [1, 2, 3, 4, 5];
+// const doubledNumbers = numbers.map((num) => console.log(num));
+
+// exp : 2
+// const colors = ["red", "green", "blue"];
+// const indexedColors = colors.map((color, index) => `${index + 1}: ${color}`);
+// console.log(indexedColors); // Output: ["1: red", "2: green", "3: blue"]
+
+//! ================= 15 Javascript string methods =================
+
+//! 1)  String charAt() method in JavaScript is used to return the character at a specified index in a string.
+
+// exp : 1
+// let str = "Hello, World!";
+// let char = str.charAt(0); // Gets the first character
+// console.log(char); // Output: "H"
+
+//! 2)  String concat() method is for combining  strings in JavaScript.
+
+// exp : 1
+// let string1 = "Hello";
+// let string2 = "World";
+// let string3 = "!";
+// let resultString1 = string1.concat(" ", string2);
+// console.log(resultString1); // Output: "Hello World"
+// let resultString2 = string1.concat(" ", string2, string3);
+// console.log(resultString2); // Output: "Hello World!"
+
+//! 2)  String replace() method in JavaScript is used to replace a part of a string with another string.
+
+// exp : 1
+// let str = "Hello, world!";
+// let newStr = str.replace("world", "JavaScript");
+// console.log(newStr); // Output: "Hello, JavaScript!"
+
+//! ================= 15 JavaScript String concat =================
 
 /*
 The concat() method joins two or more strings.
