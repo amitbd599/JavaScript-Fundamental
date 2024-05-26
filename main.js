@@ -579,6 +579,131 @@ Why use function?
 // const lastIndex = numbers.lastIndexOf(3, 4); // Start searching from index 4 backward
 // console.log(lastIndex); // Output: 2
 
+//! 5)  Array length property showing how to get the length
+
+// exp : 1
+// let fruits = ["Apple", "Banana", "Cherry"];
+// console.log(fruits.length); // Output: 3
+
+// exp : 2
+// let emptyArray = [];
+// console.log(emptyArray.length); // Output: 0
+
+//! 5)  Array pop() method in JavaScript is used to remove the last element from an array and return that element
+
+// exp : 1
+// let fruits = ["Apple", "Banana", "Cherry"];
+// let lastFruit = fruits.pop();
+// console.log(fruits);     // Output: ["Apple", "Banana"]
+// console.log(lastFruit);  // Output: "Cherry"
+
+//! 5)  Array push() method in JavaScript is used to add one or more elements to the end of an array and returns the new length of the array.
+
+// exp : 1
+// let fruits = ['apple', 'banana'];
+// let newLength = fruits.push('orange');
+// console.log(fruits);     // Output: ['apple', 'banana', 'orange']
+// console.log(newLength);  // Output: 3
+
+// exp : 2
+// let numbers = [1, 2, 3];
+// let newLength = numbers.push(4, 5, 6);
+// console.log(numbers);    // Output: [1, 2, 3, 4, 5, 6]
+// console.log(newLength);  // Output: 6
+
+//! 5)  Array push() method reverse an array using a loop
+
+// exp : 1
+// let arr = [1, 2, 3, 4, 5];
+// arr.reverse();
+// console.log(arr);  // Output: [5, 4, 3, 2, 1]
+
+//! 5)  Array shift() method in JavaScript is used to remove the first element from an array and return that element.
+
+// exp : 1
+// let fruits = ["apple", "banana", "cherry"];
+// let firstFruit = fruits.shift();
+// console.log(firstFruit); // Output: "apple"
+// console.log(fruits); // Output: ["banana", "cherry"]
+
+// exp : 2
+// let numbers = [1, 2, 3, 4, 5];
+// while (numbers.length > 0) {
+//     let firstNumber = numbers.shift();
+//     console.log(firstNumber); // Output: 1, then 2, then 3, then 4, then 5
+// }
+// console.log(numbers); // Output: []
+
+//! 5)  Array slice() method in JavaScript is used to create a shallow copy of a portion of an array into a new array object.
+
+// exp : 1
+// let fruits = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
+// let citrus = fruits.slice(1, 3);
+// console.log(citrus); // Output: ["Banana", "Cherry"]
+// console.log(fruits); // Output: ["Apple", "Banana", "Cherry", "Date", "Elderberry"]
+
+// exp : 2
+// let colors = ["Red", "Green", "Blue", "Yellow", "Purple"];
+// let primaryColors = colors.slice(2);
+// console.log(primaryColors); // Output: ["Blue", "Yellow", "Purple"]
+
+//! 5)  Array some() method in JavaScript is used to test whether at least one element in the array passes the test implemented by the provided function.
+
+// exp : 1
+// const numbers = [1, 2, 3, -4, 5];
+// const hasPositive = numbers.some((number) => number === 3);
+// console.log(hasPositive); // Output: true
+
+// exp : 2
+// const numbers = [1, 3, 5, 7, 8];
+// const hasEven = numbers.some((number) => number % 2 === 0);
+// console.log(hasEven); // Output: true
+
+//! 5)  Array sort() method in JavaScript to sort arrays.
+
+// exp : 1
+// const fruits = ["banana", "orange", "apple", "mango"];
+// fruits.sort();
+// console.log(fruits); // Output: ["apple", "banana", "mango", "orange"]
+
+// exp : 2
+// const numbers = [4, 2, 5, 1, 3];
+// numbers.sort((a, b) => a - b);
+// console.log(numbers); // Output: [1, 2, 3, 4, 5]
+
+// explain
+// [4, 2, 5, 1, 3]
+// [2, 4, 5, 1, 3]  // 4-2 = 2  positive
+// [2, 4, 5, 1, 3]  // 4-5 = -1  negative
+// [1, 2, 4, 5, 3]  // 5-1 = 4  positive -> 4-1 = 3  positive -> 2-1 = 1  positive
+// [1, 2, 3, 4, 5]  // 5-3 = 2  positive -> 4-3 = 1  positive -> 2-3 = -1  positive
+
+//! 5)  Array splice() method adds and/or removes array elements
+// exp : 1
+// let fruits = ['apple', 'banana', 'cherry', 'date'];
+// fruits.splice(1, 2); // (index, Number of items to be removed)
+// console.log(fruits); // Output: ['apple', 'cherry']
+
+// exp : 2
+// let fruits = ['apple', 'cherry'];
+
+// fruits.splice(1, 0, 'banana', 'date'); // Add 'banana' and 'date' starting from index 1
+// console.log(fruits); // Output: ['apple', 'banana', 'date', 'cherry']
+
+// exp : 3
+// let fruits = ['apple', 'banana', 'cherry', 'date'];
+// fruits.splice(1, 2, 'orange', 'grape'); // Remove 'banana' and 'cherry', then add 'orange' and 'grape' starting from index 1
+// console.log(fruits); // Output: ['apple', 'orange', 'grape', 'date']
+
+//! 5)  Array toString() method converts each element of an array to a string and then concatenates those strings with a comma separator
+// const fruits = ['Apple', 'Banana', 'Orange'];
+// console.log(fruits.toString()); // Output: Apple,Banana,Orange
+
+//! 5)  Array unshift()  method in JavaScript adds one or more elements to the beginning of an array and returns the new length of the array
+// let fruits = ['apple', 'banana', 'orange'];
+// fruits.unshift('grape');
+// console.log(fruits); // Output: ['grape', 'apple', 'banana', 'orange']
+
 // ================= 14 JavaScript Array findIndex =================
 
 /*  
