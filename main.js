@@ -144,6 +144,7 @@ multiple lines
 
 // ================= 6 JAVASCRIPT SWITCH =================
 
+// Exp: 1
 // var myDate = new Date().getDay();
 // var day;
 // switch (myDate) {
@@ -171,14 +172,97 @@ multiple lines
 
 //   console.log(day);
 
+// Exp: 2
+
+// let fruit = 'apple';
+// switch (fruit) {
+//   case 'banana':
+//     console.log('Bananas are $0.99 per pound.');
+//   case 'apple':
+//     console.log('Apples are $1.29 per pound.');
+//   case 'orange':
+//     console.log('Oranges are $0.89 per pound.');
+//   default:
+//     console.log('Sorry, we are out of ' + fruit + '.');
+// }
+
 // ================= 7 JS LOOP =================
 
-//! for loop
+//! for loop ===========
+
+//! Example : 1
+// Basic For Loop
 
 // let array = ["a", "b", "c"];
 // for (var i = 0; i < array.length; i++) {
 //   console.log(array[i]);
 // }
+
+//! Example : 2
+// For Loop with Array
+
+// const fruits = ['apple', 'banana', 'cherry'];
+
+// for (let i = 0; i < fruits.length; i++) {
+//     console.log(fruits[i]);
+// }
+
+//! Example : 3
+// For Loop with Conditional
+// for (let i = 0; i <= 10; i++) {
+//     if (i % 2 === 0) {
+//         console.log(i);
+//     }
+// }
+
+//! Example : 4
+// Nested For Loop
+
+// for (let i = 1; i <= 10; i++) {
+//     let row = '';
+//     for (let j = 1; j <= 10; j++) {
+//         row += (i * j) + '\t';
+//     }
+//     console.log(row);
+// }
+
+//! Example : 5
+// For Loop with Objects
+
+// const person = {
+//   name: 'John',
+//   age: 30,
+//   city: 'New York',
+// };
+
+// for (let key in person) {
+//   if (person.hasOwnProperty(key)) {
+//     console.log(`${key}: ${person[key]}`);
+//   }
+// }
+
+//! Example : 6
+// For Loop with Break and Continue
+
+// for (let i = 0; i < 10; i++) {
+//   if (i === 5) {
+//     break; // Exit the loop when i is 5
+//   }
+//   if (i % 2 === 0) {
+//     continue; // Skip the current iteration if i is even
+//   }
+//   console.log(i);
+// }
+
+//! Example : 7
+// For Loop with Decrement
+
+// for (let i = 10; i >= 0; i--) {
+//   console.log(i);
+// }
+
+//! Example : 8
+// Sum data n
 
 // var n = 100;
 // var sum= 0;
@@ -188,21 +272,62 @@ multiple lines
 
 // console.log(sum);
 
-//! while loop
+//! while loop ===========
 
-// var i = 10;
-// while (i <= 15) {
-//   console.log(i);
+//! Example : 1
+// Basic Counter
+
+// let counter = 1;
+
+// while (counter <= 5) {
+//   console.log(counter);
+//   counter++;
+// }
+
+//! Example : 2
+// Sum Numbers
+
+// let sum = 0;
+// let number = 1;
+
+// while (number <= 10) {
+//   sum += number;
+//   number++;
+// }
+
+// console.log('Sum:', sum);
+
+//! Example : 3
+// Finding a Number
+
+// const numbers = [1, 3, 5, 7, 9];
+// const target = 7;
+// let found = false;
+// let i = 0;
+
+// while (i < numbers.length && !found) {
+//   if (numbers[i] === target) {
+//     found = true;
+//     console.log('Number found at index:', i);
+//   }
 //   i++;
 // }
 
-// do while loop
+// if (!found) {
+//   console.log('Number not found');
+// }
 
-// var i = 10;
+//! do while loop ==========
+
+//! Example : 1
+// Basic
+
+// let i = 1;
+
 // do {
 //   console.log(i);
 //   i++;
-// } while (i <= 25);
+// } while (i <= 5);
 
 // ================= 8 JavaScript Function =================
 
@@ -299,12 +424,61 @@ Why use function?
 // var x = Array.from("AB  C");
 // console.log(x); // [ 'A', 'B', ' ', 'c' ]
 
-// ================= 13 JavaScript Array Filter =================
+// ================= 13 JavaScript Array Method Reference Guide =================
 
-/*  
-1) The filter() method creates a new array
-*/
+//! 1)  Array at() method in JavaScript allows you to access elements of an array using a relative index.
 
+// const array = [10, 20, 30, 40, 50];
+
+// console.log(array.at(0)); // Output: 10 (first element)
+// console.log(array.at(2)); // Output: 30 (third element)
+// console.log(array.at(-1)); // Output: 50 (last element)
+// console.log(array.at(-3)); // Output: 30 (third from last element)
+
+//! 2)  Array concat() method in JavaScript is used to merge two or more arrays.
+
+// let array1 = [1, 2, 3];
+// let array2 = [4, 5, 6];
+
+// let combinedArray = array1.concat(array2);
+
+// console.log(combinedArray); // Output: [1, 2, 3, 4, 5, 6]
+
+//! 3)  Array copyWithin() method in JavaScript is used to shallow copy part of an array to another location in the same array and return it without modifying its length.
+
+// Basic Syntax
+// array.copyWithin(target, start, end)
+
+// let arr = [1, 2, 3, 4, 5];
+// arr.copyWithin(0, 3); // Copy elements starting from index 3 to the beginning
+// console.log(arr); // Output: [4, 5, 3, 4, 5]
+
+//! 4)  Array every()  method in JavaScript tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value (true or false).
+
+// exp : 1
+// const numbers = [1, 2, 3, 4, 5];
+// const allPositive = numbers.every((num) => num > 0);
+// console.log(allPositive); // Output: true
+
+// exp : 2
+// const numbers = [2, 4, 6, 8, 10];
+// const allEven = numbers.every(num => num % 2 === 0);
+// console.log(allEven); // Output: true
+
+//! 4)  Array fill() method in JavaScript is used to fill the elements of an array with a static value.
+
+// let array = new Array(5); // Creates an array of length 5
+// array.fill(0); // Fills the array with 0
+// console.log(array); // Output: [0, 0, 0, 0, 0]
+
+//! 5)  Array filter() is a powerful method in JavaScript that allows you to create a new array containing elements that pass a certain condition
+
+// exp : 1
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const evenNumbers = numbers.filter((num) => num % 2 === 0);
+// console.log(evenNumbers); // Output: [2, 4, 6, 8, 10]
+
+// exp : 2
 // var words = [
 //   "spray",
 //   "limit",
@@ -315,10 +489,95 @@ Why use function?
 // ];
 
 // var result = words.filter((item) => item.length < 6);
-
 // console.log(words[0].length);
-
 // console.log(result);
+
+//! 5)  Array find() method returns the value of the first element in the array that satisfies the provided testing function. If no such element is found, it returns undefined.
+
+// exp : 1
+// const numbers = [1, 2, 3, 4, 5];
+// const found = numbers.find(num => num === 3);
+// console.log(found); // Output: 3
+
+// exp : 2
+// const fruits = [
+//   { name: 'apple', color: 'red' },
+//   { name: 'banana', color: 'yellow' },
+//   { name: 'grape', color: 'purple' },
+// ];
+// const foundFruit = fruits.find((fruit) => fruit.color === 'yellow');
+// console.log(foundFruit); // Output: { name: 'banana', color: 'yellow' }
+
+//! 5)  Array findIndex() method in JavaScript returns the index of the first element in the array that satisfies the provided testing function.
+
+// exp : 1
+// const numbers = [1, 3, 5, 7, 8, 9];
+// const evenIndex = numbers.findIndex((num) => num % 2 === 0);
+// console.log(evenIndex); // Output: 4 (index of the first even number 8)
+
+// exp : 2
+// const fruits = ["apple", "banana", "cherry", "date"];
+// const startsWithCIndex = fruits.findIndex(fruit => fruit.startsWith('c'));
+// console.log(startsWithCIndex);
+
+//! 5)  Array from() Converting a string to an array of characters
+// exp : 1
+// const str = 'hello';
+// const charsArray = Array.from(str);
+// console.log(charsArray); // Output: ['h', 'e', 'l', 'l', 'o']
+
+// exp : 2
+// const set = new Set([1, 2, 3, 4, 5]);
+// const arrayFromSet = Array.from(set);
+// console.log(arrayFromSet); // Output: [1, 2, 3, 4, 5]
+
+//! 5)  Array includes() method in JavaScript is used to check if an array includes a certain value among its entries, returning true or false accordingly.
+
+// exp : 1
+// const array = [1, 2, 3, 4, 5];
+// console.log(array.includes(3)); // Output: true
+// console.log(array.includes(6)); // Output: false
+
+// exp : 2
+// const array = ['apple', 'banana', 'orange'];
+// console.log(array.includes('banana')); // Output: true
+// console.log(array.includes('grape')); // Output: false
+
+//! 5)  Array indexOf() method to get index of array element
+
+// exp : 1
+// const fruits = ['apple', 'banana', 'orange', 'apple', 'mango'];
+// const indexOfApple = fruits.indexOf('apple');
+// console.log(indexOfApple); // Output: 0
+
+// exp : 2
+// const fruits = ['apple', 'banana', 'orange', 'apple', 'mango'];
+// const indexOfSecondApple = fruits.indexOf('apple', 1);
+// console.log(indexOfSecondApple); // Output: 3
+
+//! 5)  Array join() method in JavaScript is used to join all elements of an array into a string.
+
+// exp : 1
+// const fruits = ["Apple", "Banana", "Orange"];
+// const joinedString = fruits.join(); // Apple,Banana,Orange
+// console.log(joinedString)
+
+// exp : 2
+// const fruits = ["Apple", "Banana", "Orange"];
+// const joinedString = fruits.join("|"); // Apple,Banana,Orange
+// console.log(joinedString)
+
+//! 5)  Array lastIndexOf() method returns -1 if the element is not found in the array.
+
+// exp : 1
+// const numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+// const lastIndex = numbers.lastIndexOf(3);
+// console.log(lastIndex); // Output: 6
+
+// exp : 2
+// const numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+// const lastIndex = numbers.lastIndexOf(3, 4); // Start searching from index 4 backward
+// console.log(lastIndex); // Output: 2
 
 // ================= 14 JavaScript Array findIndex =================
 
@@ -663,7 +922,6 @@ In JavaScript, a variable has two types of scope:
 // var obj = new child();
 
 // obj.myFunChild();
-
 
 // ================= 7 Supper Keyword =================
 
